@@ -1,0 +1,26 @@
+    <h3>Edit Data {{data.id}}</h3>
+    <form class="ui form" [formGroup]="formSave" (ngSubmit)="save(formSave)" *ngIf="data">
+        <input type="hidden" formControlName="id" [(ngModel)]="data.id">
+        <div class="field">
+          <label>Nama Lengkap</label>
+          <input type="text" formControlName="nama" [(ngModel)]="data.nama" placeholder="nama">
+       </div>
+        <div class="field">
+          <label>Email</label>
+          <input type="text" formControlName="email" [(ngModel)]="data.email" placeholder="email">
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input type="password" formControlName="password" [(ngModel)]="data.password" placeholder="password">
+       </div>
+        <div class="field">
+          <label>Nomor Telepon</label>
+          <input type="text" formControlName="telepon" [(ngModel)]="data.telepon" placeholder="telepon">
+        </div>
+        <div class="field">
+          <label>Nomor HP</label>
+          <input type="text" formControlName="hp" [(ngModel)]="data.hp" placeholder="hp">
+        </div>
+        <button class="ui button" type="submit">Save</button>
+        <a routerLink="/daftar"><button class="ui button">Back</button></a>
+    </form>

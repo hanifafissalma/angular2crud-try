@@ -1,0 +1,25 @@
+<h3>Tambah Data</h3>
+		<form class="ui form" [formGroup]="formSave" (ngSubmit)="save(formSave)">
+        <input type="hidden" formControlName="id">
+  			<div class="field">
+    			<label>Nama Lengkap</label>
+    			<input type="text" formControlName="nama" placeholder="nama">
+ 			 </div>
+  			<div class="field">
+    			<label>Email</label>
+    			<input type="text" formControlName="email" placeholder="email">
+  			</div>
+  			<div class="field">
+    			<label>Password</label>
+    			<input type="password" formControlName="password" placeholder="password">
+ 			 </div>
+  			<div class="field">
+    			<label>Nomor Telepon</label>
+    			<input type="text" formControlName="telepon" placeholder="telepon">
+  			</div>
+  			<div class="field">
+    			<label>Nomor HP</label>
+    			<input type="text" formControlName="hp" placeholder="hp">
+  			</div>
+  			<button class="ui button" type="submit">Save</button>
+		</form>
